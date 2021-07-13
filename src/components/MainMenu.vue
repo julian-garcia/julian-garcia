@@ -37,15 +37,15 @@ export default {
 .nav-menu {
   a {
     font-family: MenuFont;
-    -moz-transform: skew(-15deg, 0deg);
-    -webkit-transform: skew(-15deg, 0deg);
-    -o-transform: skew(-15deg, 0deg);
-    -ms-transform: skew(-15deg, 0deg);
-    transform: skew(-15deg, 0deg);
+    -moz-transform: skew(-21deg, 0deg);
+    -webkit-transform: skew(-21deg, 0deg);
+    -o-transform: skew(-21deg, 0deg);
+    -ms-transform: skew(-21deg, 0deg);
+    transform: skew(-21deg, 0deg);
     height: 50px;
 
     span {
-      transform: skew(15deg, 0deg);
+      transform: skew(21deg, 0deg);
     }
 
     &.router-link-active {

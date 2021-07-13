@@ -1,7 +1,7 @@
 <template>
   <div class="container cube mx-auto">
     <MainMenu />
-    <div class="content">
+    <div class="content left-0 md:left-12">
       <router-view />
     </div>
   </div>
@@ -56,7 +56,6 @@ export default {
     position: absolute;
     box-sizing: border-box;
     top: 50px;
-    left: 50px;
   }
 }
 

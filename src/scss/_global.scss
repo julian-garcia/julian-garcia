@@ -6,6 +6,34 @@ h1, h2, h3, h4, h5, h6 {
   font-family: TitleFont, Helvetica, Arial, sans-serif;
 }
 
-p {
+p, li {
   font-family: BodyFont, serif;
+  font-size: 18px;
+}
+
+.gradient-section {
+  background: linear-gradient(180deg, rgba($primaryColour, 0.5) 0%, transparent 100%);
+  margin-top: -40px;
+}
+
+ul {
+  &.bullet li{
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  &.bullet li::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    background: lightgray;
+    border: 1px solid $secondaryColour;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: -1px 3px 0px $secondaryColour;
+  }
 }
