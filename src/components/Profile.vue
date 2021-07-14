@@ -1,22 +1,42 @@
 <template>
   <div class="profile grid grid-flow-col auto-cols-max">
     <div class="profile-links">
-      <a class="block mt-4 ml-7" href="#" target="_blank" rel="noopener noreferrer">
+      <a
+        class="block mt-4 ml-7"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <font-awesome-icon icon="file-download" />
       </a>
-      <a class="block mt-1 ml-1" href="#" target="_blank" rel="noopener noreferrer">
+      <a
+        class="block mt-1 ml-1"
+        href="https://github.com/julian-garcia"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <font-awesome-icon :icon="['fab', 'github-square']" />
       </a>
-      <a class="block mt-1 ml-0.5" href="#" target="_blank" rel="noopener noreferrer">
+      <a
+        class="block mt-1 ml-0.5"
+        href="https://www.linkedin.com/in/juliangarcialeoni/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <font-awesome-icon :icon="['fab', 'linkedin']" />
       </a>
-      <a class="block mt-1" href="#" target="_blank" rel="noopener noreferrer">
+      <a
+        class="block mt-1"
+        href="https://www.catchafire.org/profiles/71413/impact/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img src="../assets/images/catchafire.svg" alt="" class="ml-6" />
       </a>
     </div>
     <div class="profile-image"></div>
     <div class="profile-logos">
-      <img src="../assets/images/gatsby.svg" alt="">
+      <img src="../assets/images/gatsby.svg" alt="" />
       <font-awesome-icon :icon="['fab', 'js-square']" />
       <font-awesome-icon :icon="['fab', 'angular']" />
       <font-awesome-icon :icon="['fab', 'vuejs']" />
@@ -62,7 +82,7 @@ export default {
   color: rgba($primaryColour, 0.4);
   font-size: 26px;
 
-  &>* {
+  & > * {
     display: block;
     margin: 0 auto 0.5rem;
   }
