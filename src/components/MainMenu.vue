@@ -4,7 +4,7 @@
       nav-menu
       grid grid-flow-col
       auto-cols-min
-      float-right
+      md:float-right
       overflow-hidden
       pl-2
     "
@@ -20,7 +20,11 @@
       </router-link>
     </li>
     <li>
-      <router-link to="/contact" class="py-3 px-3 block">
+      <router-link
+        to="/contact"
+        class="py-3 px-3 block"
+        :class="{ 'router-link-active': homeRoutePath }"
+      >
         <span class="inline-block">Contact</span>
       </router-link>
     </li>
@@ -30,6 +34,11 @@
 <script>
 export default {
   name: "MainMenu",
+  computed: {
+    homeRoutePath() {
+      return this.$route.path === "/";
+    },
+  },
 };
 </script>
 

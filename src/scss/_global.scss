@@ -1,14 +1,27 @@
 body {
   background-color: $primaryColour;
+  overflow-x: hidden;
+}
+
+html, body, #app {
+  @apply h-full;
+  @screen md {
+    height: unset;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: TitleFont, Helvetica, Arial, sans-serif;
 }
 
-p, li, input[type="text"] {
+p, li, input[type="text"], a {
   font-family: BodyFont, serif;
   font-size: 18px;
+}
+
+.page-link {
+  color: $secondaryColour;
+  font-weight: bold;
 }
 
 .gradient-section {

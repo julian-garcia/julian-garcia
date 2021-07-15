@@ -1,7 +1,9 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-5 gap-4 p-5">
+  <div class="grid grid-cols-1 md:grid-cols-5 gap-4 p-5 w-full">
     <div class="md:col-span-3">
-      <h1 class="text-xl italic">Website construction with long term support</h1>
+      <h1 class="text-xl italic">
+        Website construction with long term support
+      </h1>
       <p class="pt-5">
         I'm here to help anyone or any small businesses in need of a unique,
         accessible website without the hassle.
@@ -9,7 +11,9 @@
     </div>
     <Profile />
   </div>
-  <div class="gradient-section grid grid-cols-1 md:grid-cols-6 gap-12 px-5 py-9">
+  <div
+    class="gradient-section grid grid-cols-1 md:grid-cols-6 gap-12 px-5 pt-9"
+  >
     <ul class="md:col-span-4 bullet mt-7">
       <li>
         <h2 class="inline text-lg">Style.</h2>
@@ -42,8 +46,18 @@
       </li>
     </ul>
     <form class="w-full md:col-span-2 mt-2" @submit.prevent="sendMessage">
-      <FormInput type="email" name="emailAddress" label="Email address" v-model:emailAddress="emailAddress" />
-      <FormInput type="textarea" name="message" label="Message" v-model:message="message" />
+      <FormInput
+        type="email"
+        name="emailAddress"
+        label="Email address"
+        v-model:emailAddress="emailAddress"
+      />
+      <FormInput
+        type="textarea"
+        name="message"
+        label="Message"
+        v-model:message="message"
+      />
       <Button type="submit" label="Send" />
     </form>
   </div>
@@ -53,20 +67,48 @@
 import Profile from "../components/Profile.vue";
 import FormInput from "../components/FormInput.vue";
 import Button from "../components/Button.vue";
+import emailjs from "emailjs-com";
 
 export default {
   name: "ContactPage",
   components: { Profile, FormInput, Button },
   data() {
-    return { emailAddress: '', message: '' };
+    return { emailAddress: "", message: "" };
   },
   methods: {
     sendMessage() {
       if (this.$data.emailAddress && this.$data.message) {
-        alert(JSON.stringify(this.$data));
+        document.getElementById("emailAddress").value = "";
+        document.getElementById("message").value = "";
+
+        const templateParams = {
+          email: this.$data.emailAddress,
+          message: this.$data.message,
+        };
+
+        emailjs
+          .send(
+            process.env.VUE_APP_EMAILJS_SERVICE_ID,
+            process.env.VUE_APP_EMAILJS_TEMPLATE_ID,
+            templateParams,
+            process.env.VUE_APP_EMAILJS_USER_ID
+          )
+          .then(
+            (response) => {
+              console.log(response.status, response.text);
+              this.emailAddress = "";
+              this.message = "";
+              alert(
+                `Thanks - your message has been sent, I'll get back to you`
+              );
+            },
+            (err) => {
+              console.error(err);
+            }
+          );
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -75,7 +117,7 @@ export default {
   li {
     position: relative;
     padding-right: 45px;
-  } 
+  }
 }
 .usp-icon {
   position: absolute;

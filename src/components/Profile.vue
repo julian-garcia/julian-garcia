@@ -1,11 +1,12 @@
 <template>
-  <div class="profile grid grid-flow-col auto-cols-max">
+  <div class="profile grid grid-flow-col auto-cols-max mx-auto">
     <div class="profile-links">
       <a
         class="block mt-4 ml-7"
-        href="#"
+        href="../assets/julian_garcia.pdf"
         target="_blank"
         rel="noopener noreferrer"
+        download
       >
         <font-awesome-icon icon="file-download" />
       </a>

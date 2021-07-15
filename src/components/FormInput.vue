@@ -1,7 +1,20 @@
 <template>
   <label :for="name">{{ label }}</label>
-  <input v-if="type === 'text' || type === 'email'" :type="type" :name="name" :id="name" @input="handleInput" />
-  <textarea v-if="type === 'textarea'" :name="name" :id="name" cols="30" rows="10" @input="handleInput"></textarea>
+  <input
+    v-if="type === 'text' || type === 'email'"
+    :type="type"
+    :name="name"
+    :id="name"
+    @input="handleInput"
+  />
+  <textarea
+    v-if="type === 'textarea'"
+    :name="name"
+    :id="name"
+    cols="30"
+    rows="10"
+    @input="handleInput"
+  ></textarea>
 </template>
 
 <script>
@@ -10,9 +23,9 @@ export default {
   props: ["type", "name", "label"],
   methods: {
     handleInput(e) {
-      this.$emit(`update:${this.$props.name}`, e.target.value)
-    }
-  }
+      this.$emit(`update:${this.$props.name}`, e.target.value);
+    },
+  },
 };
 </script>
 
@@ -23,9 +36,10 @@ label {
   margin-bottom: 5px;
   display: block;
 }
-input, textarea {
+input,
+textarea {
   background: $lightColour;
-  border: 2px dashed $secondaryColour;
+  border: 1px solid $secondaryColour;
   box-sizing: border-box;
   box-shadow: 0px 0px 10px $primaryColour;
   border-radius: 2px;
@@ -41,7 +55,8 @@ textarea {
   width: 100%;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   outline: none;
 }
 </style>

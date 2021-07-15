@@ -1,7 +1,7 @@
 <template>
-  <div class="container cube mx-auto">
+  <div class="app-container cube md:mx-auto">
     <MainMenu />
-    <div class="content left-0 md:left-12">
+    <div class="content">
       <router-view />
     </div>
   </div>
@@ -11,51 +11,75 @@
 import MainMenu from "./components/MainMenu.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: { MainMenu },
 };
 </script>
 
 <style lang="scss">
-.container.cube {
-  border: 3px solid #000000;
-  border-bottom: none;
+.app-container.cube {
+  border: 5px solid darken($primaryColour, 10);
   box-sizing: border-box;
   background: white;
-  margin-top: 2rem;
-  min-height: calc(100vh - 2rem);
+  min-height: 500px;
   max-width: 800px;
   position: relative;
 
+  @apply mt-0 md:mt-8;
+
   &:after,
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     box-sizing: border-box;
-    min-height: calc(100vh - 2rem - 53px);
+    min-height: 400px;
     top: 50px;
+  }
+
+  &:before {
+    height: calc(100% - 45px);
   }
 
   &:after {
     width: 800px;
-    right: -50px;
-    border: 3px solid #000000;
+    border: 5px solid darken($secondaryColour, 10);
     background: $secondaryColour;
     z-index: -1;
-    border-bottom: none;
+    height: 100%;
+
+    @apply hidden md:block;
+
+    @screen md {
+      right: -53px;
+    }
   }
 
   &:before {
-    width: 750px;
     right: -3px;
-    border: 3px dashed #999;
+    border: 3px dashed darken($lightColour, 10);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    left: 0;
+    width: 100%;
+    max-width: 752px;
+
+    @screen md {
+      left: 43px;
+      border-left: 3px dashed darken($lightColour, 10);
+      border-right: 3px dashed darken($lightColour, 10);
+      border-bottom: 3px dashed darken($lightColour, 10);
+    }
   }
 
   .content {
-    content: '';
-    position: absolute;
     box-sizing: border-box;
-    top: 50px;
+
+    @apply relative md:mt-12;
+
+    @screen md {
+      margin-left: calc(3rem - 2px);
+    }
   }
 }
 

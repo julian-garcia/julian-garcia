@@ -12,7 +12,7 @@ export default {
 <style lang="scss" scoped>
 button {
   background: $lightColour;
-  border: 2px dashed $secondaryColour;
+  border: 1px solid $secondaryColour;
   box-sizing: border-box;
   box-shadow: 0px 0px 10px $primaryColour;
   border-radius: 2px;

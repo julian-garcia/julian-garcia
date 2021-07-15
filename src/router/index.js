@@ -1,5 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import ContactPage from "../pages/ContactPage.vue";
+import ProjectsPage from "../pages/ProjectsPage.vue";
+import NotFoundPage from "../pages/NotFoundPage.vue";
 
 const routes = [
   {
@@ -8,9 +10,19 @@ const routes = [
     meta: { title: "Contact" },
   },
   {
+    path: "/projects",
+    component: ProjectsPage,
+    meta: { title: "Projects" },
+  },
+  {
     path: "/",
     component: ContactPage,
     meta: { title: "Contact" },
+  },
+  {
+    path: "/:catchAll(.*)",
+    component: NotFoundPage,
+    meta: { title: "Not Found" },
   },
 ];
 
