@@ -69,7 +69,7 @@ export default {
   li::after {
     content: "/";
     position: absolute;
-    right: -4px;
+    right: -6px;
     top: 0.7rem;
     z-index: 1;
     font-size: 30px;

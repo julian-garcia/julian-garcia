@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-5 gap-4 p-5 w-full">
+  <div class="headline-container">
     <div class="md:col-span-3">
       <h1 class="text-xl italic">
         Website construction with long term support
