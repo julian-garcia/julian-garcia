@@ -3,7 +3,7 @@
     <div class="profile-links">
       <a
         class="block mt-4 ml-7"
-        href="../assets/julian_garcia.pdf"
+        href="../../julian_garcia.pdf"
         target="_blank"
         rel="noopener noreferrer"
         download
