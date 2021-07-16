@@ -8,7 +8,7 @@
   </div>
   <div class="gradient-section px-7 sm:px-10 md:px-5 pt-9">
     <ul class="bullet mt-0 md:mt-7">
-      <div class="sm:grid grid-cols-1 sm:grid-cols-8">
+      <div class="project-li">
         <a
           href="https://inclusion-nudges.org/"
           target="_blank"
@@ -26,7 +26,7 @@
           society for better inclusivity. A Gatsby project.
         </li>
       </div>
-      <div class="sm:grid grid-cols-1 sm:grid-cols-8">
+      <div class="project-li">
         <a
           href="https://www.nimbusdance.org/"
           target="_blank"
@@ -44,7 +44,7 @@
           advertising the company and event promotion.
         </li>
       </div>
-      <div class="sm:grid grid-cols-1 sm:grid-cols-8">
+      <div class="project-li">
         <a
           href="https://collective.tech/"
           target="_blank"
@@ -62,7 +62,7 @@
           collaborative learning. Implemented using Gatsby.
         </li>
       </div>
-      <div class="sm:grid grid-cols-1 sm:grid-cols-8">
+      <div class="project-li">
         <a
           href="https://movetheelephant.org/"
           target="_blank"
@@ -80,7 +80,7 @@
           else in future.
         </li>
       </div>
-      <div class="sm:grid grid-cols-1 sm:grid-cols-8">
+      <div class="project-li">
         <a
           href="https://sclerodermainfo.org/"
           target="_blank"
@@ -114,6 +114,10 @@ export default {
 
 <style lang="scss" scoped>
 .bullet {
+  .project-li {
+    @apply sm:grid grid-cols-1 sm:grid-cols-8 sm:mb-0 mb-6;
+  }
+
   img {
     width: auto;
     max-width: unset;

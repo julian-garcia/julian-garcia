@@ -18,7 +18,7 @@
       <li>
         <h2 class="inline text-lg">Style.</h2>
         I will bring your website to life, applying your unique brand. From
-        menus to buttons to forms.
+        layout and colour scheme to menus and forms.
         <font-awesome-icon icon="border-style" class="usp-icon" />
       </li>
       <li>

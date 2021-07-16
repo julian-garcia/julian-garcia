@@ -10,14 +10,13 @@
     </div>
     <Profile />
   </div>
-  <div class="py-1"></div>
 </template>
 
 <script>
 import Profile from "../components/Profile.vue";
 
 export default {
-  name: "ContactPage",
+  name: "NotFoundPage",
   components: { Profile },
 };
 </script>
