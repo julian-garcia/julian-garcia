@@ -1,5 +1,6 @@
 <template>
   <label :for="name">{{ label }}</label>
+  <p class="hint" v-if="hint">{{ hint }}</p>
   <input
     v-if="type === 'text' || type === 'email'"
     :type="type"
@@ -20,7 +21,7 @@
 <script>
 export default {
   name: "FormInput",
-  props: ["type", "name", "label"],
+  props: ["type", "name", "label", "hint"],
   methods: {
     handleInput(e) {
       this.$emit(`update:${this.$props.name}`, e.target.value);
@@ -58,5 +59,10 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
+}
+.hint {
+  color: darken($primaryColour, 10);
+  font-size: 16px;
+  margin-top: -7px;
 }
 </style>

@@ -49,7 +49,8 @@
       <FormInput
         type="email"
         name="emailAddress"
-        label="Email address"
+        label="Email"
+        hint="So I can get back to you"
         v-model:emailAddress="emailAddress"
       />
       <FormInput

@@ -15,7 +15,7 @@
         Thank you so much for your work on the KEIGWIN + COMPANY website - I
         absolutely love what you created - stylish, simple and functional. I
         also heard nothing but positive feedback about working with you. You
-        have the magic combination of “talent” and “great to work with”. I hope
+        have the magic combination of "talent" and "great to work with". I hope
         we all get to work together in the future.
       </p>
       <h2 class="person">Larry Keigwin,<br />Keigwin + Company</h2>
