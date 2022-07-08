@@ -12,7 +12,7 @@ To reach me or learn more about me, please visit [julian-garcia.uk](https://juli
 
 ---
 ## 🛠 Skills
-Javascript, HTML, CSS/SCSS, VueJs, Angular, Gatsby
+Javascript, HTML, CSS/SCSS, Angular, Gatsby, WordPress
 
 ---
 ## 🔗 Links
