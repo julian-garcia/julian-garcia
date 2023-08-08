@@ -1,6 +1,5 @@
 
 # Julian Garcia
-<img src="https://julian-garcia.uk/favicon.ico" alt="" height="60" style="float:left">
 
 Hello, I am a front end web developer
  
