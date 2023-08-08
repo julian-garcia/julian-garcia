@@ -2,17 +2,17 @@
 # Julian Garcia
 <img src="https://julian-garcia.uk/favicon.ico" alt="" height="60" style="float:left">
 
-Hello, I am a front end web developer and this repository is for my personal website, 
-built using VueJS 3 and served on Firebase. 
+Hello, I am a front end web developer
+ 
 To reach me or learn more about me, please visit [julian-garcia.uk](https://julian-garcia.uk).
 
-### Tech Stack
+### Frameworks
 
-**Client:** VueJS, TailwindCSS, **Server:** Firebase
+**Client:** Angular, TailwindCSS, WordPress
 
 ---
 ## 🛠 Skills
-Javascript, HTML, CSS/SCSS, Angular, Gatsby, WordPress
+Javascript, Typescript, HTML, CSS/SCSS
 
 ---
 ## 🔗 Links
